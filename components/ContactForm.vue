@@ -3,31 +3,31 @@
 		<!-- name -->
 		<div class="space-y-1">
 			<FormLabel title="Name" />
-			<FormInputField type="text" v-model="formData.name" :isError="errors.name" :error="errors.name" @keyup="validateNameField('name', formData.name)" />
+			<FormInputField type="text" id="name" v-model="formData.name" :isError="errors.name" :error="errors.name" @keyup="validateNameField('name', formData.name)" placeholder="Enter your name" />
 		</div>
 
 		<!-- email -->
 		<div class="space-y-1">
 			<FormLabel title="Email" />
-			<FormInputField type="email" v-model="formData.email" :isError="errors.email" :error="errors.email" @keyup="validateNameField('email', formData.email)" @input="handleValidEmail" :isValid="isValidEmail" />
+			<FormInputField type="email" id="email" v-model="formData.email" :isError="errors.email" :error="errors.email" @keyup="validateNameField('email', formData.email)" @input="handleValidEmail" :isValid="isValidEmail" placeholder="Enter your email" />
 		</div>
 
 		<!-- phone -->
 		<div class="space-y-1">
 			<FormLabel title="Phone Number" />
-			<FormInputField type="number" v-model="formData.phone" :isError="errors.phone" :error="errors.phone" @keyup="validateNameField('phone', formData.phone)" />
+			<FormInputField type="number" id="phone" v-model="formData.phone" :isError="errors.phone" :error="errors.phone" @keyup="validateNameField('phone', formData.phone)" placeholder="Enter your phone" />
 		</div>
 
 		<!-- subject -->
 		<div class="space-y-1">
 			<FormLabel title="Subject" />
-			<FormInputField type="text" v-model="formData.subject" :isError="errors.subject" :error="errors.subject" @keyup="validateNameField('subject', formData.subject)" />
+			<FormInputField type="text" id="subject" v-model="formData.subject" :isError="errors.subject" :error="errors.subject" @keyup="validateNameField('subject', formData.subject)" placeholder="Enter your subject" />
 		</div>
 
 		<!-- message -->
 		<div class="space-y-1">
 			<FormLabel title="Message" />
-			<FormTextareaField v-model="formData.message" :isError="errors.message" :error="errors.message" @keyup="validateNameField('message', formData.message)" />
+			<FormTextareaField id="message" v-model="formData.message" :isError="errors.message" :error="errors.message" @input="validateNameField('message', formData.message)" placeholder="Your message here..." />
 		</div>
 
 		<!-- submit button  -->
@@ -37,6 +37,10 @@
 
 <script setup>
 import {useToast} from "tailvue"
+import FormLabel from "./Form/Label.vue"
+import FormInputField from "./Form/InputField.vue"
+import FormTextareaField from "./Form/TextareaField.vue"
+import ButtonsPrimary from "./Buttons/Primary.vue"
 
 const toast = useToast()
 

@@ -40,6 +40,10 @@ import {useToast} from "tailvue"
 
 const toast = useToast()
 
+// composable - form validation
+const {validateNameField, errors} = useFormValidation()
+
+// initial value
 const formData = reactive({
 	name: "",
 	email: "",
@@ -48,15 +52,15 @@ const formData = reactive({
 	message: "",
 })
 
+// for disable and loading submit button
 const isFormSubmit = ref(false)
 
+//
 const isValidEmail = ref(false)
 const handleValidEmail = (value) => {
 	isValidEmail.value = value
 	console.log("value", value)
 }
-
-const {validateNameField, errors} = useFormValidation()
 
 // reset form
 const resetForm = () => {

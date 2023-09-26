@@ -63,7 +63,6 @@ const isFormSubmit = ref(false)
 const isValidEmail = ref(false)
 const handleValidEmail = (value) => {
 	isValidEmail.value = value
-	console.log("value", value)
 }
 
 // reset form

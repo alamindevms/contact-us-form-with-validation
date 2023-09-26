@@ -1,8 +1,14 @@
-# Nuxt 3 Minimal Starter
+# Contact us form with validation
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A robust Contact Us form with Name, Email, Phone, Subject, and Message fields. User-friendly validation and error handling, and reset form inputs after submission for a seamless experience.
 
 ## Setup
+
+Node version:
+
+```
+use: v18
+```
 
 Make sure to install the dependencies:
 
@@ -33,9 +39,30 @@ pnpm run dev
 
 # yarn
 yarn dev
+```
 
-# bun
-bun run dev
+## Test ( Unit, E2E )
+
+Test the form inputs:
+
+```bash
+# npm
+npm run test
+
+# yarn
+yarn test
+
+```
+
+Test the form e2e:
+
+```bash
+# npm
+npm run test:e2e
+
+# yarn
+yarn test:e2e
+
 ```
 
 ## Production
@@ -51,9 +78,6 @@ pnpm run build
 
 # yarn
 yarn build
-
-# bun
-bun run build
 ```
 
 Locally preview production build:
@@ -67,9 +91,14 @@ pnpm run preview
 
 # yarn
 yarn preview
-
-# bun
-bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+# Screenshot
+
+### Normal
+
+![Alt text](/screenshot/contact-us.png?raw=true "Contact Us Page")
+
+### With Error Message
+
+![Alt text](/screenshot/contact-us-with-error.png?raw=true "Contact Us Page With Error")

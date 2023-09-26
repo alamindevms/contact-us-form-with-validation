@@ -19,10 +19,6 @@ describe("Contact Form Test:", () => {
 
 		await wrapper.find("input").setValue("Al Amin Hossain")
 
-		await wrapper.trigger("type", {
-			modelValue: "Al Amin Hossain"
-		})
-
 		expect(wrapper.emitted("input")[0][0]).toBe("Al Amin Hossain")
 	})
 
@@ -40,10 +36,6 @@ describe("Contact Form Test:", () => {
 		})
 
 		await wrapper.find("input").setValue("alamindev.io@gmail.com")
-
-		await wrapper.trigger("type", {
-			modelValue: "alamindev.io@gmail.com"
-		})
 
 		expect(wrapper.emitted("input")[0]).toBeTruthy()
 	})
@@ -63,10 +55,6 @@ describe("Contact Form Test:", () => {
 
 		await wrapper.find("input").setValue("01922866947")
 
-		await wrapper.trigger("type", {
-			modelValue: "01922866947"
-		})
-
 		expect(wrapper.emitted("input")[0][0]).toBe("01922866947")
 	})
 
@@ -84,10 +72,6 @@ describe("Contact Form Test:", () => {
 		})
 
 		await wrapper.find("input").setValue("Hi there.")
-
-		await wrapper.trigger("type", {
-			modelValue: "Hi there."
-		})
 
 		expect(wrapper.emitted("input")[0][0]).toBe("Hi there.")
 	})
